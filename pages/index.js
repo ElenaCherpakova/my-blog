@@ -1,3 +1,10 @@
+import { Section } from '../components';
+
 export default function Home() {
-  return <div>hello</div>;
+  return (
+    <div>
+      <Section>cover</Section>
+      <Section>Post</Section>
+    </div>
+  );
 }

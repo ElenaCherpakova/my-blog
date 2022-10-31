@@ -1,7 +1,7 @@
 import React from "react";
-import "./index.module.css";
-
-const Button = () => {
+import styles from './index.module.scss';
+import cl from 'classnames';
+const Button = ({className}) => {
   return <div>index</div>;
 };
 

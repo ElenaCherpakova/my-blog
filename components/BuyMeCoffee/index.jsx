@@ -1,7 +1,7 @@
 import React from "react";
-import "./index.module.css";
-
-const BuyMeCoffee = () => {
+import styles from './index.module.scss';
+import cl from 'classnames';
+const BuyMeCoffee = ({ className }) => {
   return <div>index</div>;
 };
 
