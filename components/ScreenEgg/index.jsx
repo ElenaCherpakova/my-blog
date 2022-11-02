@@ -1,8 +1,10 @@
 import React from 'react';
 import styles from './index.module.scss';
 import cl from 'classnames';
-const ScreenEgg = ({ className}) => {
-  return <div>index</div>;
+
+const ScreenEgg = ({ className, type, children }) => {
+  return <div className={cl(className, styles.screenEgg,
+    type === 'right' ? styles.screenEggRight : styles.screenEggLeft)}>{children}</div>;
 };
 
 
