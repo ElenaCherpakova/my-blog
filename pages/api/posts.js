@@ -2,8 +2,13 @@
 
 import { client } from '../../lib/client';
 
-export default function posts(req, res) {
-  res.status(200).json({ name: 'John Doe' });
+export default async function posts(req, res) {
+  const { start, end } = req.query;
+  if(isNaN(Number(start)) || isNaN(Number(end))) {
+    return res.status(400).json({ error: 'Invalid query' });
+  }
+  const { posts, total } = await loadPosts(start, end);
+  res.status(200).json({ posts, total });
 }
 
 export async function loadPosts(start, end) {
