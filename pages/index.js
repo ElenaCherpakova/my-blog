@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Head from 'next/head';
 import {
   Section,
   Cover,
@@ -37,6 +38,9 @@ export default function Home({ initialPosts, total }) {
   };
   return (
     <div>
+      <Head>
+        <title>Blog of Elena Cherpakova</title>
+      </Head>
       <Section>
         <Cover title='Elena<br/> Cherpakova' />
         <SocialNetworks />
